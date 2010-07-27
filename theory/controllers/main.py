@@ -50,9 +50,9 @@ class MainController(BaseController):
             if g.tc.server is None:
                 g.tc = TConfig()
                 if g.tc.server is None:
-                    c.config = '/config?firsttime=1'
+                    c.config = 'config?firsttime=1'
             else:
-                c.config = '/config?noconnection=1'
+                c.config = 'config?noconnection=1'
             pass
         except IncorrectPassword:
             abort(401)
